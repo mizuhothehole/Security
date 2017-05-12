@@ -1,11 +1,13 @@
 All encryptions in 2017
 
-1.des ： symmetric and not safe. broke in 1999
-2.des3 ：symmetric and safe.  based on des
-3.aes ： symmetric and safe. developed from des
-4.md5 ： not symmetric . safe
-5.sha1： not symmetric . safe
+1.des ： symmetric and not safe. broke in 1999. the speed is fast，so used in big data conditions.
+2.des3 ：symmetric and safe.  based on des. using three private keys to calculate the data of encryption three times.much safer than des.
+3.aes ： symmetric and safe. developed from des. also very fast and is the newest standard of the USA.
+4.md5 ： dispersive . safe
+5.sha1： dispersive . safe
 6.rsa ： not symmetric . safe . having private key and public key.
+7.dsa ： not symmetric . safe . 
+8.ecc ： not symmetric . safe .
 
 All the encryptions can be done by java or any other programming languages.
 
