@@ -1,4 +1,4 @@
-All encryptions in 2017
+All encryptions in 2017 around the world
 
 1.des ： symmetric and not safe. broke in 1999. the speed is fast，so used in big data conditions.
 2.des3 ：symmetric and safe.  based on des. using three private keys to calculate the data of encryption three times.much safer than des.
@@ -12,3 +12,6 @@ All encryptions in 2017
 All the encryptions can be done by java or any other programming languages.
 
 After the quantum computer is developed all encryptions above will be having no security
+
+the encryption symmetric can not be used in the conditions of digital signature. but it can process big data because of much quicker processing speed. and the encryption not symmetrix can be applied in the conditions of using digital signature. So the most usual way of using these encryptions is to first use the encryptions symmetrix to calculate the big data to be reserved， and then use the encryptions symmetrix to manage them.
+
