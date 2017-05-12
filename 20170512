@@ -15,3 +15,12 @@ After the quantum computer is developed all encryptions above will be having no 
 
 the encryption symmetric can not be used in the conditions of digital signature. but it can process big data because of much quicker processing speed. and the encryption not symmetrix can be applied in the conditions of using digital signature. So the most usual way of using these encryptions is to first use the encryptions symmetrix to calculate the big data to be reserved， and then use the encryptions symmetrix to manage them.
 
+the usage of not symmetrix encryption
+
+。加密算法以公钥PK和待加密的消息M作为输入，输出密文CT。在RSA中，加密算法如下：算法直接输出密文为
+。解密算法以私钥SK和密文CT作为输入，输出消息M。在RSA中，解密算法如下：算法直接输出明文为。由于e和d在下互逆，因此我们有：
+所以，从算法描述中我们也可以看出：公钥用于对数据进行加密，私钥用于对数据进行解密。当然了，这个也可以很直观的理解：公钥就是公开的密钥，其公开了大家才能用它来加密数据。私钥是私有的密钥，谁有这个密钥才能够解密密文。否则大家都能看到私钥，就都能解密，那不就乱套了。
+
+。签名算法以私钥SK和待签名的消息M作为输入，输出签名。在RSA签名中，签名算法直接输出签名为。注意，签名算法和RSA加密体制中的解密算法非常像。
+。验证算法以公钥PK，签名以及消息M作为输入，输出一个比特值b。b=1意味着验证通过。b=0意味着验证不通过。在RSA签名中，验证算法首先计算，随后对比M'与M，如果相等，则输出b=1，否则输出b=0。注意：验证算法和RSA加密体制中的加密算法非常像。
+所以，在签名算法中，私钥用于对数据进行签名，公钥用于对签名进行验证。这也可以直观地进行理解：对一个文件签名，当然要用私钥，因为我们希望只有自己才能完成签字。验证过程当然希望所有人都能够执行，大家看到签名都能通过验证证明确实是我自己签的。
