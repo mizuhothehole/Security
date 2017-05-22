@@ -1,6 +1,10 @@
 暗号化に対してフィストとラインダール
 
-i read some books about codes and i find two ways of encryption.  
+I read some books about codes and i find two ways of encryption.  
 Des this uses a round function and one round will make 50　percent of the plain text became unreadable.des is a kind of function that makes encryption by block of 64Bytes .the Bytes are processes like this ,dividing the 64Bytes into 2parts and then use the right part and key(also 64Bytes ) calculatord by the method you refined.use the result and the left part to make a XOR,then switch the left block and the right block.then make the same processes more one time.
 The series of processes is called one round .
 At the first round and the end round the switch will not happen . The middle processes will always switch. The round function is defined by who.
+The codes are encrypted by 64bit blocks. Anyway, it seems 
+
+The other way to encrypt is called aes.
+This is also a kind of block encryption. First we make a 128bit block,　the calculation is mainly done in this block. First we must do the first processing,made like this, 4 steps . Firstly calculate the block all,to make the 4*4block all changed.then the second step is to switch one row in the block. The third step is calculating the columns. The last step is do the XOR by a key of aes.
