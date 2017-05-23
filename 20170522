@@ -6,5 +6,9 @@ The series of processes is called one round .
 At the first round and the end round the switch will not happen . The middle processes will always switch. The round function is defined by who.
 The codes are encrypted by 64bit blocks. Anyway, it seems 
 
-The other way to encrypt is called aes.
-This is also a kind of block encryption. First we make a 128bit block,　the calculation is mainly done in this block. First we must do the first processing,made like this, 4 steps . Firstly calculate the block all,to make the 4*4block all changed.then the second step is to switch one row in the block. The third step is calculating the columns. The last step is do the XOR by a key of aes.
+The other way to encrypt is called aes.As the block is much bigger, The safety is also much netted.
+This is also a kind of block encryption. First we make a 128bit block,　the calculation is mainly done in this block. First we must do the first processing,made like this, 4 steps . Firstly calculate the block all,to make the 4*4block all changed.then the second step is to switch one row in the block. The third step is calculating the columns. The last step is do the XOR by a key of aes.There are lots of standards like aes128,aes192,aes256. Every time of the encryption is also called a round. The round numbers left is 10,12 and 14.
+
+But when the plain text is so long that it is nut just the size of a block, then the text will be devided into several blocks. Then everyone of the blocks will do a encryption. When the last block is smaller than the size of a block, The needed size will be added auto.At last the devided blocks will be encrypted one by one. At last, the way to process the blocks is also having big differences.Like when we use a starting block to encrypt the plain text,we will make it more and more safe.
+There are lots of methods but only the easiest one and the counter one can be processed concurrency.So it seems that we must consider the easiest way to make the speed fastest.
+
