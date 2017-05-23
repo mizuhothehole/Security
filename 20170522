@@ -12,3 +12,4 @@ This is also a kind of block encryption. First we make a 128bit block,　the cal
 But when the plain text is so long that it is nut just the size of a block, then the text will be devided into several blocks. Then everyone of the blocks will do a encryption. When the last block is smaller than the size of a block, The needed size will be added auto.At last the devided blocks will be encrypted one by one. At last, the way to process the blocks is also having big differences.Like when we use a starting block to encrypt the plain text,we will make it more and more safe.
 There are lots of methods but only the easiest one and the counter one can be processed concurrency.So it seems that we must consider the easiest way to make the speed fastest.
 
+To use the algorithm we need to define the key , the initial block, and the plain text .
