@@ -13,3 +13,5 @@ But when the plain text is so long that it is nut just the size of a block, then
 There are lots of methods but only the easiest one and the counter one can be processed concurrency.So it seems that we must consider the easiest way to make the speed fastest.
 
 To use the algorithm we need to define the key , the initial block, and the plain text .
+
+In the next daily blog I will write the algorithm of the other kind of keys called pair key. Any way the フェスト　and the ラインダール　is always faster than psir keys algorithm.
