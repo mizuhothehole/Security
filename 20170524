@@ -1,0 +1,11 @@
+Pair key solutions about encryption 
+1.public key: A key to be used for encrypting plain text.
+2.privaye key: A key to be used for decrypting unreadable text.
+
+I give a public key to github, and everytime git sent me the text I will receive the unreadable text.However, if I use the private key to do a calculate, and then send the unreadable text to someone else,as it can be decrypted by public key, so after that the plain text will show my sign.If it is not signed by me,the result will make sence. It is not the plain text sent by me.It is sent by someone else. This will help us to check the safety of the file.So every time I use ssh to send file to github it will check my Signature and if it is not having the right fignature,the ssh will regard the data went in unvalid .Well ,anyway it is important to have a safety check.Imagine if everyone can go into the ssh of linux easily,it will have no ensurance to the safety of your github anyway.
+
+Oh,It looks so cool because now we can make sure the safety of communication with github, but it is just letting github know that I am having the authority .In fact if I am sending a lot of files,it is unable to use this way.As a result,there will also need the des3 or the aes algorithm. So the best solution is that firstly using des3 or aes to encrypt the plain text,and produce the key.Then use a pair key to encrypt the produced key.
+
+At last we can use the process like this:A use aes to encrypt a plain text,and then use the public key to encrypt the produced key of aes.And then send the encrypted key and the encrypted text together.And then when B received the encrypted key and encrypted text, B used the private key to decrypt the encrypted prodecued key ,then use the produced key to decrypt the unreadable text. At last he will get the plain text.
+
+This way of communication between A and B is much safer and faster.And it is widely used in the year of 2017.
