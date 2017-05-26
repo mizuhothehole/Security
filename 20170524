@@ -1,4 +1,4 @@
-Pair key solutions about encryption 
+Pair key solutions about encryption and hybrid encryption
 1.public key: A key to be used for encrypting plain text.
 2.privaye key: A key to be used for decrypting unreadable text.
 
@@ -9,3 +9,5 @@ Oh,It looks so cool because now we can make sure the safety of communication wit
 At last we can use the process like this:A use aes to encrypt a plain text,and then use the public key to encrypt the produced key of aes.And then send the encrypted key and the encrypted text together.And then when B received the encrypted key and encrypted text, B used the private key to decrypt the encrypted prodecued key ,then use the produced key to decrypt the unreadable text. At last he will get the plain text.
 
 This way of communication between A and B is much safer and faster.And it is widely used in the year of 2017.
+
+It seems that the security solution can be hybrid. If we now have a big text, so first we use aes to encrypt tbe text, the round key is made random.And then we use pair key to encrypt the random key.So now we have used public key and plain text as input, and the encrypted text as output.Then we use private key to decrypt the session key and then use the session key to decrypt the text.
