@@ -1,0 +1,26 @@
+Android application security
+
+Recently I am thinking some kind of issues that has great risks.
+To avoid these, here is some good coding practice:
+
+	1.The android:debuggable is a risk of memory hacking.
+	To avoid this kind of issues, may try to set this to be false in AndroidManifest.xml
+
+	2.The android:exported should be false essentially, unless you want some other process
+	to see your data or open your activity.
+
+	3.The android:usesCleartextTraffic should be set to false, unless you want some http trffic.
+
+	4.The android:launchMode should be considered to be 「normal」.
+
+	5.Avoid using ACTIVITY_NEW_TASK while launching a new activity.
+
+	6.Do not define android:taskAffinity, just use the default.
+
+	7.Android provider has readable/writable control. Try to define them for better security.
+
+	8.In-house applications: use same signature and define customized permissions of "signature" protection.
+	And then check whether the caller has the same package name as expected.
+
+	9.Make android:allowBackup false. because it will leak security data.
+  
